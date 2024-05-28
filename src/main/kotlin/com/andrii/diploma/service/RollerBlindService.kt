@@ -115,5 +115,9 @@ class RollerBlindService(
             }
         }
     }
+
+    fun getAllDevices(): List<RollerBlindEntity> {
+        return rollerBlindRepository.findAll();
+    }
 }
 
