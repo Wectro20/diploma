@@ -109,8 +109,8 @@ class RollerBlindController(
         return ResponseEntity.ok(rollerBlindService.getDeviceState(deviceId))
     }
 
-    @GetMappling("/getAll")
+    @GetMapping("/getAll")
     fun getAll(): ResponseEntity<List<RollerBlindEntity>> {
-        return ResponseEntity.ok(rollerBlindService.getAll())
+        return ResponseEntity.ok(rollerBlindService.getAllDevices())
     }
 }
