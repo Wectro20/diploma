@@ -119,5 +119,9 @@ class RollerBlindService(
     fun getAllDevices(): List<RollerBlindEntity> {
         return rollerBlindRepository.findAll();
     }
+
+    fun deleteByDeviceId(deviceId: String) {
+        rollerBlindRepository.deleteByDeviceId(deviceId)
+    }
 }
 

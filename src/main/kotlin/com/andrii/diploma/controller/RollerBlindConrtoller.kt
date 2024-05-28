@@ -113,4 +113,12 @@ class RollerBlindController(
     fun getAll(): ResponseEntity<List<RollerBlindEntity>> {
         return ResponseEntity.ok(rollerBlindService.getAllDevices())
     }
+
+    @PostMapping("/delete/{deviceId}")
+    fun deleteByDeviceId(
+        @PathVariable deviceId: String
+    ): ResponseEntity<String> {
+        rollerBlindService.deleteByDeviceId(deviceId)
+        return ResponseEntity.ok("Device with id $deviceId was successfully deleted")
+    }
 }
